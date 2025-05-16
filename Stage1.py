@@ -2,8 +2,7 @@ import numpy as np
 import faiss
 import json
 from sentence_transformers import SentenceTransformer
-# from langchain_ollama import OllamaLLM
-from langchain_community.llms import Ollama
+from langchain_ollama import OllamaLLM
 
 def load_metadata(file_path="metadata.json"):
     with open(file_path, "r", encoding="utf-8") as file:
@@ -28,8 +27,7 @@ def main():
     summaries = list(dict_data.values())
     model = SentenceTransformer('all-MiniLM-L6-v2')
     embeddings, index = build_faiss_index(summaries, model)
-    # ollama_llm = OllamaLLM(model="deepseek-r1:7b")
-    ollama_llm = Ollama(model="deepseek-r1:7b")
+    ollama_llm = OllamaLLM(model="deepseek-r1:7b")
     user_query = "I want to build a Bio medical NER model using Bert"
     if not user_query.strip():
         print("No query provided.")
