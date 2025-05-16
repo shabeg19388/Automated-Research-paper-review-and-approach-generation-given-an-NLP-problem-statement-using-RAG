@@ -6,3 +6,10 @@ matplotlib<3.8.0
 numpy>=1.26.4,<1.27
 pandas>=2.0
 tqdm>=4.65
+# FAISS (CPU version). If you have a GPU and want GPU support, swap to faiss-gpu instead.
+faiss-cpu>=1.7.4
+# Sentence-Transformers for embeddings
+sentence-transformers>=2.2.2
+# LangChain Ollama integration
+langchain-community>=0.0.193
+langchain>=0.0.200
