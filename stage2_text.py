@@ -87,7 +87,7 @@ print("\nExtraction complete! Data saved to extracted_pdf_data.json and generate
 
 
 
-#hi
+
 #Qwen
 #Claude
 #Colom-confrence
